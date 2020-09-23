@@ -1,69 +1,75 @@
-
 *{
-	margin: 0;
-	padding:0;
-	box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background:url(intento13.jpg);
+    background-attachment:fixed;
+    background-repeat:no-repeat;
 
 }
-body{background:url(intento13.jpg);
-	background-attachment:fixed;
-	background-repeat:no-repeat;
 
+.cuadrados{
+    width: 40%;
+    background:#229B92;
+    padding:60px;
+    margin-top:5%;
+    margin:auto;
+    margin-bottom:10%;
+    border-radius:4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow:7px 13px 37px #060606;
 }
-.cuadrados
-{
-	width: 30%;
-	background:#229B92;
-	padding:30px;
-	margin-top:5%;
-	margin:auto;
-	margin-bottom:10%;
-	border-radius:4px;
-	font-family: 'calibri';
-	color: white;
-	box-shadow:7px 13px 37px #060606;
-}
+
 .cuadrados h4{
-	font-size:30px;
-	margin-bottom: 20px;
+    font-size:30px;
+    margin-bottom: 20px;
 }
 
 .cuadrados h1{
-	font-size:40px;
-	margin-bottom: 20px;
+    font-size:40px;
+    margin-bottom: 20px;
 }
+
 .campos{
-	width:100%;
-	background: #60C7C1;
-	padding: 10px;
-	border-radius: 4px;
-	margin-bottom: 16px;
-	border:1px solid #1f53c5;
-	font-family: 'calibri';
-	color: white;
+    width:100%;
+    background: #60C7C1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border:1px solid #1f53c5;
+    font-family: 'calibri';
+    color: white;
 }
+
 .cuadrados p{
-	height: 24px;
-	text-align: left;
-	font-size:18px;
-	line-height: 40px;
+    height: 24px;
+    text-align: left;
+    font-size:18px;
+    line-height: 40px;
 }
+
 .cuadrados a{
-	color: white;
-	text-decoration: underline;
+    color: white;
+    text-decoration: underline;
 }
+
 .boton{
-	width: 100%;
-	background: #1f53c5;
-	border: none;
-	padding: 14px;
-	color: white;
-	margin: 16px 0;
-	font-size: 16px;
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 14px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
 }
+
 .seleccion{
-	width: 100%;
-	color: #060606;
-	margin: 16px 0;
+    width: 100%;
+    color: #060606;
+    margin: 16px 0;
 }
 

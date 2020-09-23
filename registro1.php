@@ -14,7 +14,7 @@ if(isset($_POST['nomb'])&&!empty($_POST['nomb'])&&
 		VALUES ('$_POST[nomb]','$_POST[apell]','$_POST[user]','$_POST[rol]','$_POST[documento]','$_POST[correo]','$_POST[pw]')") or die ("fallas en la grabacion".mysqli_error($con));
 		echo '<script>
 		alert("registro exitoso");
-		window.history.go(-1);
+		window.history.go(-2);
 		</script>';
 
 		echo "ALFIN.....Grabado<br>";	
