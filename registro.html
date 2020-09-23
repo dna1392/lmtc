@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="cuadrados">
+	<center>
+        <form action="registro1.php" method="POST">
+		 <H1> Bienvenidos a L.M.T.G </H1>
+         <H4> Estamos complacidos de que quieran aprender junto a nosotros </H4><br></br>
+         <input  type="text" name="nomb" class="campos"placeholder="Ingrese su nombre(s)">
+         <input required type="text" name="apell" class="campos" placeholder="Ingrese su apellido(s)">
+         <input required type="text" name="user" class="campos"placeholder="Ingrese su nombre de usuario">
+
+         <H4>Seleccione un rol</H4>	
+         <select  name="rol">
+		 	<option value="1">estudiante</option>
+		 	<option value="2">maestro</option>
+		 	<option value="3">acudiente </option>
+		 </select>
+		 <br></br>
+		 <input required type="text" name="documento" class="campos"placeholder="Ingrese su numero de documento">
+		 		
+		 <input required type="email" name="correo" class="campos"placeholder="Ingrese su correo">
+		 <input required type="password" name="pw" class="campos"placeholder="Ingrese su clave">
+         <input required type="password" name="pw1" class="campos"placeholder="Repita su clave">
+         <input type="submit" value="Registrar" class="boton">
+
+         <p> <a href="inicio.html"> ¿Ya tengo cuenta?</a></p>
+     </form>
+     </center>
+	</div>
+
+</body>
+</html>
