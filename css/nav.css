@@ -1,0 +1,70 @@
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/**/
+.nav{
+    width: 99%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    animation: 1.5s ease .6s 1 slideInFromBottom;
+}
+
+.nav-section{
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    
+    font-size: 23px;
+    text-align: center;
+    transition: .3s ease-in;
+    cursor: pointer;
+    background: background: rgba(255,255,255,.94);
+}
+
+/*********/
+
+.dynamic-nav-when-scrolling{
+    font-size: 15px;
+}
+
+/*********/
+
+.row .col{
+    padding: 10px 0.75px;
+}
+
+/* one by one [nav] */
+
+
+.home:hover{
+    background: rgb(28, 32, 255);
+    color: rgb(255,255,255);
+    border-radius: 40px 0 0 40px;
+}
+
+.toolbox:hover{
+    background: rgb(255, 123, 28);
+    color: rgb(255,255,255);
+}
+
+
+.award:hover{
+    background: rgb(0, 135, 14);
+    color: rgb(255,255,255);
+}
+
+
+.user:hover{
+    background: rgb(121, 2, 176);
+    color: rgb(255,255,255);
+    border-radius: 0 40px 40px 0;
+}
