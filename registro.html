@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="cuadrados">
-	<center>
-        <form action="registro1.php" method="POST">
-		 <H1> Bienvenidos a L.M.T.G </H1>
-         <H4> Estamos complacidos de que quieran aprender junto a nosotros </H4><br></br>
-         <input  type="text" name="nomb" class="campos"placeholder="Ingrese su nombre(s)">
-         <input required type="text" name="apell" class="campos" placeholder="Ingrese su apellido(s)">
-         <input required type="text" name="user" class="campos"placeholder="Ingrese su nombre de usuario">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
 
-         <H4>Seleccione un rol</H4>	
-         <select  name="rol">
-		 	<option value="1">estudiante</option>
-		 	<option value="2">maestro</option>
-		 	<option value="3">acudiente </option>
-		 </select>
-		 <br></br>
-		 <input required type="text" name="documento" class="campos"placeholder="Ingrese su numero de documento">
-		 		
-		 <input required type="email" name="correo" class="campos"placeholder="Ingrese su correo">
-		 <input required type="password" name="pw" class="campos"placeholder="Ingrese su clave">
-         <input required type="password" name="pw1" class="campos"placeholder="Repita su clave">
-         <input type="submit" value="Registrar" class="boton">
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="fontawesome/css/all.css">
 
-         <p> <a href="inicio.html"> ¿Ya tengo cuenta?</a></p>
-     </form>
-     </center>
-	</div>
+
+        <script src="js/prefixfree.js"></script>
+        <script src="js/jquery.js"></script>
+    </head>
+    <body>
+        <div class="wrapper center-x">
+            <center>
+                <div class="reg001"><img src="img/reg/logo-colorfull.png" alt=""></div>
+                <form action="registro1.php" method="POST">
+                    <h4> ¡Bienvenid@! </h4>
+                    <h6> Nos complace que desees aprender junto a nosotros </h6><br></br>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input required id="nomb" name="nomb" type="text" class="validate">
+                        <label class="active" for="nomb">Nombre</label>
+                    </div> 
+                    <div class="input-field col s12">
+                        <input required id="apell" name="apell" type="text" class="validate">
+                        <label class="active" for="apell">Apellido</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input required id="documento" name="documento" type="text" class="validate">
+                        <label class="active" for="documento">Número de documento de identidad</label>
+                    </div> 
+                    <div class="input-field col s12">
+                        <input id="email" name="correo" type="email" class="validate">
+                        <label class="active" for="email">Correo electrónico</label>
+                    </div>
+                </div>
+
+
+                <h4>Seleccione un rol</h4>	
+                <select  name="rol">
+                    <option value="1">estudiante</option>
+                    <option value="2">maestro</option>
+                    <option value="3">acudiente </option>
+                </select>
+                <br></br>
+            <input required type="text" name="documento" class="campos"placeholder="Ingrese su numero de documento">
+
+            <input required type="email" name="correo" class="campos"placeholder="Ingrese su correo">
+            <input required type="password" name="pw" class="campos"placeholder="Ingrese su clave">
+            <input required type="password" name="pw1" class="campos"placeholder="Repita su clave">
+            <input type="submit" value="Registrar" class="boton">
+
+            <p> <a href="inicio.html"> ¿Ya tengo cuenta?</a></p>
+            </form>
+        </center>
+    </div>
 
 </body>
+<script>
+
+    $(document).ready(function() {
+        M.updateTextFields();
+    });
+</script>
 </html>
