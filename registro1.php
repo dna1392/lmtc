@@ -14,11 +14,11 @@ if(isset($_POST['nomb'])&&!empty($_POST['nomb'])&&
 		VALUES ('$_POST[nomb]','$_POST[apell]','$_POST[user]','$_POST[rol]','$_POST[documento]','$_POST[correo]','$_POST[pw]')") or die ("fallas en la grabacion".mysqli_error($con));
 		echo '<script>
 		alert("registro exitoso");
-		window.history.go(-2);
+		window.history.go(-1);
 		</script>';
 
 		echo "ALFIN.....Grabado<br>";	
-		//header('Location: registro.html');
+		header('Location:index.html');
 
 		echo "<font size='36' color='red'>Registro agregado con exito</font>";
 		mysqli_close($con);
@@ -26,5 +26,5 @@ if(isset($_POST['nomb'])&&!empty($_POST['nomb'])&&
 	}
 else
 	{
-		echo "Esta vaina no  guardo, quiza su clave no es la misma";
+		echo "Quiza su clave no es la misma";
 	}
