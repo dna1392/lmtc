@@ -22,7 +22,7 @@
                 <div class="main-img"><img id="st001" src="img/start/st001.png" alt=""></div>
                 <div class="main-title"></div>
             </div><br>
-            <div class="nav center-x row">
+            <div id="sticky-nav-0" class="nav center-x row">
                 <div id="sticky-nav-1" class="col s3 nav-section home" style="padding: 5px 0 0; margin-top: 1px;"><a href="index.html" style="text-decoration: none; color: black;"><i class="fas fa-home"></i><br>Inicio</a></div>
                 <div id="sticky-nav-2" class="col s3 nav-section toolbox" style="padding: 5px 0 0; margin-top: 1px;"><a href="index.html" style="text-decoration: none; color: black;"><i class="fas fa-toolbox"></i><br>Herramientas</a></div>
                 <div id="sticky-nav-3" class="col s3 nav-section award" style="padding: 5px 0 0; margin-top: 1px;"><a href="index.html" style="text-decoration: none; color: black;"><i class="fas fa-award"></i><br>Sobre nosotros</a></div>
@@ -79,11 +79,13 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
 if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+document.getElementById("sticky-nav-0").classList.add("dynamic-nav-reduce");
 document.getElementById("sticky-nav-1").classList.add("dynamic-nav-when-scrolling");
 document.getElementById("sticky-nav-2").classList.add("dynamic-nav-when-scrolling");
 document.getElementById("sticky-nav-3").classList.add("dynamic-nav-when-scrolling");
 document.getElementById("sticky-nav-4").classList.add("dynamic-nav-when-scrolling");
 }else{
+document.getElementById("sticky-nav-0").classList.remove("dynamic-nav-reduce");
 document.getElementById("sticky-nav-1").classList.remove("dynamic-nav-when-scrolling");
 document.getElementById("sticky-nav-2").classList.remove("dynamic-nav-when-scrolling");
 document.getElementById("sticky-nav-3").classList.remove("dynamic-nav-when-scrolling");

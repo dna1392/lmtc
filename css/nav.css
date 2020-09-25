@@ -30,12 +30,19 @@
     background: background: rgba(255,255,255,.94);
 }
 
+.nav-section:hover{
+    color: white;
+}
+
 /*********/
 
 .dynamic-nav-when-scrolling{
     font-size: 15px;
 }
 
+.dynamic-nav-reduce{
+    width: 50%;
+}
 /*********/
 
 .row .col{
@@ -46,25 +53,25 @@
 
 
 .home:hover{
-    background: rgb(28, 32, 255);
+    background: rgb(125, 157, 255);
     color: rgb(255,255,255);
     border-radius: 40px 0 0 40px;
 }
 
 .toolbox:hover{
-    background: rgb(255, 123, 28);
+    background: rgb(255, 162, 94);
     color: rgb(255,255,255);
 }
 
 
 .award:hover{
-    background: rgb(0, 135, 14);
+    background: rgb(88, 237, 103);
     color: rgb(255,255,255);
 }
 
 
 .user:hover{
-    background: rgb(121, 2, 176);
+    background: rgb(207, 102, 255);
     color: rgb(255,255,255);
     border-radius: 0 40px 40px 0;
 }
