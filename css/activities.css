@@ -46,7 +46,6 @@ input.answer:focus, button:focus {
 button{
   font-size: 80px;
   height: 90px;
-  padding: 0 6px;
   background: rgba(0,0,0,0);
   color: rgba(30,30,30,.34);
   border: none;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>¡Vamos a sumar!</title>
+  <title>¡Vamos a restar!</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="../css/activities.css">
@@ -14,7 +14,7 @@
 <body>
 
   <div id="content" class="wrapper center-x">
-    <h3>SUMAR</h3>
+    <h3>RESTAR</h3>
     <div class="n1 col s4" style="float: left;">
       <div class="num1 composing" style="font-size: 80px;">1</div>
       <div class="num1 composing" style="font-size: 80px;">2</div>
@@ -38,7 +38,7 @@
       <div class="num1 composing" style="font-size: 80px;">20</div>
     </div>
     <div style="font-size: 80px; float: left;">
-      &nbsp;&nbsp;+&nbsp;&nbsp;
+      &nbsp;&nbsp;-&nbsp;&nbsp;
     </div>
     <div class="n2 col s4" style="float: left;">
       <div class="num2 composing" style="font-size: 80px;">1</div>
@@ -91,7 +91,7 @@ var random2 = Math.floor(Math.random() * $('.num2').length);
 $('.num2').hide().eq(random2).show();
 
 function validateOperation(){
-  var result = random1+random2+2;
+  var result = random1-random2;
   var validate = parseInt(document.getElementById('answer').value);
   //alert(validate);
   //alert(result);
