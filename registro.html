@@ -45,30 +45,25 @@
                 </div>
 
 
-                <h4>Seleccione un rol</h4>	
-                <select  name="rol">
-                    <option value="1">estudiante</option>
-                    <option value="2">maestro</option>
-                    <option value="3">acudiente </option>
-                </select>
-                <br></br>
-            <input required type="text" name="documento" class="campos"placeholder="Ingrese su numero de documento">
-
-            <input required type="email" name="correo" class="campos"placeholder="Ingrese su correo">
+                <div class="input-field col s12">
+                    <select style="display: block;">
+                        <option value="" disabled selected>Selecciona tu rol</option>
+                        <option name="rol" value="1">• Estudiante</option>
+                        <option name="rol" value="2">• Maestro</option>
+                        <option name="rol" value="3">• Padre-Madre-Acudiente</option>
+                    </select>
+                </div><br>
+                
+            <input required type="text" name="user" class="campos" placeholder="Ingrese su nombre de usuario">
             <input required type="password" name="pw" class="campos"placeholder="Ingrese su clave">
             <input required type="password" name="pw1" class="campos"placeholder="Repita su clave">
             <input type="submit" value="Registrar" class="boton">
 
-            <p> <a href="inicio.html"> ¿Ya tengo cuenta?</a></p>
+            <p> <a href="inicio.html">Ya tengo una cuenta</a></p>
+            <p> <a href="index.html">Volver a la página inicial</a></p>
             </form>
         </center>
     </div>
 
 </body>
-<script>
-
-    $(document).ready(function() {
-        M.updateTextFields();
-    });
-</script>
 </html>

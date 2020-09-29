@@ -6,6 +6,7 @@ body{
     background:url(intento13.jpg);
     background-attachment:fixed;
     background-repeat:no-repeat;
+    background-size: cover;
     padding: 15px 0 15px 0;
 
 }
@@ -21,7 +22,7 @@ body{
     border-radius:15px;
     font-family: 'calibri';
     color: rgb(34, 155, 146);
-    box-shadow:4px 3px rgba(30,30,30,.24);
+    box-shadow:4px 3px 20px rgba(30,30,30,.44);
 
 }
 
@@ -56,7 +57,7 @@ color: white;
 
 .boton{
     width: 100%;
-    background: #1f53c5;
+    background: rgb(16, 161, 127);
     border: none;
     padding: 14px;
     color: white;
