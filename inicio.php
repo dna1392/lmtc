@@ -17,7 +17,7 @@
 
          	}
          	else
-         		{echo "Debes llenar todos los campos";}
+         		{echo "Usuario y/o contraseña incorrecta";}
          }
 ?>
 	

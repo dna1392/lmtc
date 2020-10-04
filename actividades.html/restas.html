@@ -66,43 +66,72 @@
       &nbsp;&nbsp;=&nbsp;&nbsp;
     </div>
     <div style="float: left;">
-      <input type="text" id="answer" name="userInput" value="" class="answer" placeholder="?">&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" id="answer" name="userInput" value="" class="answer" placeholder="?" autofocus>&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 
-    <button type="button" name="button" onclick="validateOperation()"><i class="fas fa-check" style="float: right;"></i></button>
+    <button type="button" name="button" onclick="validateOperation()" title="Validar"><i class="fas fa-check"
+        style="float: right;"></i></button>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <!-- <button id="reloadNew" type="button" name="reload">Reload</button> -->
-
+    <button id="reloadNew" type="button" name="button" onclick="llenarBarra()" title="Siguiente ejercicio">►</button>
   </div>
+  <br><br>
+  <center><progress id="progress-max" value="0" max="100" style="width: 50%; height: 25px;"></progress><button
+      id="finish" style="display: none;">Finalizar</button></center>
+
+  <script type="text/javascript">
+  /* RANDOMIZE AND VALIDATE */
+  var random1 = Math.floor(Math.random() * $('.num1').length);
+    $('.num1').hide().eq(random1).show();
+
+    var random2 = Math.floor(Math.random() * $('.num2').length);
+    $('.num2').hide().eq(random2).show();
+
+    function validateOperation() {
+      var result = random1 - random2;
+      var validate = parseInt(document.getElementById('answer').value);
+      //alert(validate);
+      //alert(result);
+
+      if (result != validate) {
+        alert("Uy, parece que te has equivocado... Vamos de nuevo");
+        //location.reload();
+        //load(location.href+"#content");
+      } else {
+        alert("¡Excelente! Sigue así");
+        $('#content').load('restas-x.html');
+        llenarBarra();
+        //location.reload();  
+        //load(location.href+"#content");
+      }
+    }
+    function nonZNumbers(){
+      if(result<0){
+        $('#content').load('restas-x.html');
+      }
+    }
+    window.onload = nonZNumbers();
+
+  //PROGRESS BAR
+    $indicator = document.getElementById('progress-max').value;
+    //$i=0;
+
+    function llenarBarra() {
+
+      $indicator = parseInt(document.getElementById('progress-max').value);
+      $indicator = $indicator + 10;
+      document.getElementById('progress-max').value = $indicator;
+
+      if ($indicator > 100) {
+        alert("¡Puntos guardados! Presiona enter o aceptar para continuar.");
+        window.location = "restas.html";
+      }
+    }
+    
+    //AJAX
+    $('#reloadNew').click(function () {
+      $('#content').load('restas-x.html');
+    });
+  </script>
 </body>
-<!-- <script type="text/javascript">
-$(document).ready(function(){
-  $('#reloadNew').click(function(){$('#content').load(location.href+"#content*','");
-});
-});
-</script> -->
 
-
-<script type="text/javascript">
-var random1 = Math.floor(Math.random() * $('.num1').length);
-$('.num1').hide().eq(random1).show();
-
-var random2 = Math.floor(Math.random() * $('.num2').length);
-$('.num2').hide().eq(random2).show();
-
-function validateOperation(){
-  var result = random1-random2;
-  var validate = parseInt(document.getElementById('answer').value);
-  //alert(validate);
-  //alert(result);
-
-  if(result != validate){
-    alert("Uy, parece que te has equivocado... Vamos de nuevo");
-    location.reload();
-  }else{
-    alert("¡Excelente! Sigue así");
-    location.reload();
-  }
-}
-</script>
 </html>

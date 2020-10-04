@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title></title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" type="text/css" href="inicio.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="fontawesome/css/all.css"> -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+	<script src="js/prefixfree.js"></script>
+	<script src="js/jquery.js"></script>
 </head>
+
 <body>
-	<div class="cuadrado1">
+	<div class="wrapper center-x">
 		<center>
+			<div class="reg001"><img src="img/start/cropped-logo.png" alt=""></div><br>
 			<form action="index.html" method="POST">
-			<H5>Inicio de sesion</H5>
-			<input  type="text" name="usuario" class="campos"placeholder="Nombre de usuario"><br></br>
-			<input type="password" name="pw" class="campos"placeholder="Clave"><br></br>
-			<input type="submit" value="Continuar" class="boton">
+				<h3>Inicio de sesion</h3>
+		</center>
+		<!-- <center><hr style="width: 75%;"></center> -->
+		<br><br>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Usuario</label>
+			<input type="text" name="user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">Contraseña</label>
+			<input type="password" name="pw" class="form-control" id="exampleInputPassword1">
+		</div>
+		<input type="submit" value="Iniciar" class="boton"><br><br>
+
+		<a href="registro.html">• No tengo cuenta aún</a><br>
+		<a href="index.html">• Volver a la página inicial</a>
 
 
 </body>
+
 </html>

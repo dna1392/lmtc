@@ -7,16 +7,16 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-  <link rel="stylesheet" href="../css/activities.css">
+  <!-- <link rel="stylesheet" href="../css/activities.css">
   <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css">
-  <link rel="stylesheet" href="../fontawesome/css/all.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.css"> -->
 </head>
 <script src="../js/jquery.js" charset="utf-8"></script>
 
 <body onload="stopRefresh()">
 
-  <div id="content" class="wrapper center-x">
+  <div id="content">
     <h3>SUMAR</h3>
     <div class="n1 col s4" style="float: left;">
       <div class="num1 composing" style="font-size: 80px;">1</div>
@@ -75,11 +75,11 @@
     <button type="button" name="button" onclick="validateOperation()" title="Validar"><i class="fas fa-check"
         style="float: right;"></i></button>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <button id="reloadNew" type="button" name="button" onclick="llenarBarra()" title="Siguiente ejercicio">►</button>
+    <button id="reloadNew" type="button" name="button" onclick="llenarBarra()"
+      title="Siguiente ejercicio">►</button><br><br>
+
   </div>
-  <br><br>
-  <center><progress id="progress-max" value="0" max="100" style="width: 50%; height: 25px;"></progress><button
-      id="finish" style="display: none;">Finalizar</button></center>
+  <!-- <progress id="progress-max" value="0" max="100" style="width: 100%; height: 25px;"></progress> -->
 
   <script type="text/javascript">
     /* RANDOMIZE AND VALIDATE */
@@ -126,7 +126,7 @@
       document.getElementById('progress-max').value = $indicator;
 
       if ($indicator > 100) {
-        alert("¡Puntos guardados! Presiona Aceptar para continuar.");
+        alert("¡Puntos guardados! Presiona enter o aceptar para continuar.");
         window.location = "restas.html";
       }
     }

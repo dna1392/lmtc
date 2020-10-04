@@ -3,24 +3,29 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style1.css">
 
 	<script src="js/jquery.js" charset="utf-8"></script>
 </head>
 <body>
-	<div id="indicator">
-
+	<h2>hola</h2>
+	<div id="content">
 	</div>
-	<progress value="0" max="100"></progress>
+	<progress id="progress-max" value="0" max="100"></progress>
+	<button type="button" onclick="llenarBarra()" name="button">dfsdf</button>
 
 </body>
 <script type="text/javascript">
-	$indicator = document.getElementById('progress-max').value;
-	$i=0;
 
 	function llenarBarra(){
+		
+	    $indicator = parseInt(document.getElementById('progress-max').value);
 		$indicator = $indicator +10;
 		document.getElementById('progress-max').value=$indicator;
+
+		if($indicator>100){
+			alert("Wey ya");
+			window.location="index.html";
+		}
 	}
 </script>
 </html>

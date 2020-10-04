@@ -1,0 +1,50 @@
+.center-x{
+    margin: 0 auto;
+}
+
+body{
+    background:url(intento13.jpg);
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size: cover;
+    padding: 100px 0 15px 0;
+
+}
+
+.wrapper{
+/*     background: rgba(34, 155, 146,.64); */
+    background: rgba(200, 247, 244,.64);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+
+    width: 40%;
+    padding: 30px 50px;
+    border-radius:15px;
+    font-family: 'calibri';
+    color: rgb(34, 155, 146);
+    box-shadow:4px 3px 20px rgba(30,30,30,.44);
+
+}
+
+.reg001 img{
+    width: 105px;
+}
+
+h3{
+    font-weight: 700;
+}
+
+label{
+    font-weight: 700;
+}
+
+.boton{
+    width: 20%;
+    background: rgb(16, 161, 127);
+    border: none;
+    padding: 14px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 15px;;
+}

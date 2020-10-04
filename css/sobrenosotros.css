@@ -20,12 +20,12 @@ body{
     max-width: 85%;
     background: rgb(255,255,255);
     border-radius: 15px;
-    font-size: large;
 /*     box-shadow: 3px 4px rgba(0,0,0,.54); */
 }
 
 .main-img{
     text-align: center;
+    height: 550px;
 }
 
 #st001{
