@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>¡Vamos a sumar!</title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <!-- <link rel="stylesheet" href="../css/activities.css">
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.css"> -->
+</head>
+<script src="../js/jquery.js" charset="utf-8"></script>
+
+<body onload="stopRefresh()">
+
+  <div id="content">
+    <h3>SUMAR</h3>
+    <div class="n1 col s4" style="float: left;">
+      <div class="num1 composing" style="font-size: 80px;">1</div>
+      <div class="num1 composing" style="font-size: 80px;">2</div>
+      <div class="num1 composing" style="font-size: 80px;">3</div>
+      <div class="num1 composing" style="font-size: 80px;">4</div>
+      <div class="num1 composing" style="font-size: 80px;">5</div>
+      <div class="num1 composing" style="font-size: 80px;">6</div>
+      <div class="num1 composing" style="font-size: 80px;">7</div>
+      <div class="num1 composing" style="font-size: 80px;">8</div>
+      <div class="num1 composing" style="font-size: 80px;">9</div>
+      <div class="num1 composing" style="font-size: 80px;">10</div>
+      <div class="num1 composing" style="font-size: 80px;">11</div>
+      <div class="num1 composing" style="font-size: 80px;">12</div>
+      <div class="num1 composing" style="font-size: 80px;">13</div>
+      <div class="num1 composing" style="font-size: 80px;">14</div>
+      <div class="num1 composing" style="font-size: 80px;">15</div>
+      <div class="num1 composing" style="font-size: 80px;">16</div>
+      <div class="num1 composing" style="font-size: 80px;">17</div>
+      <div class="num1 composing" style="font-size: 80px;">18</div>
+      <div class="num1 composing" style="font-size: 80px;">19</div>
+      <div class="num1 composing" style="font-size: 80px;">20</div>
+    </div>
+    <div style="font-size: 80px; float: left;">
+      &nbsp;&nbsp;+&nbsp;&nbsp;
+    </div>
+    <div class="n2 col s4" style="float: left;">
+      <div class="num2 composing" style="font-size: 80px;">1</div>
+      <div class="num2 composing" style="font-size: 80px;">2</div>
+      <div class="num2 composing" style="font-size: 80px;">3</div>
+      <div class="num2 composing" style="font-size: 80px;">4</div>
+      <div class="num2 composing" style="font-size: 80px;">5</div>
+      <div class="num2 composing" style="font-size: 80px;">6</div>
+      <div class="num2 composing" style="font-size: 80px;">7</div>
+      <div class="num2 composing" style="font-size: 80px;">8</div>
+      <div class="num2 composing" style="font-size: 80px;">9</div>
+      <div class="num2 composing" style="font-size: 80px;">10</div>
+      <div class="num2 composing" style="font-size: 80px;">11</div>
+      <div class="num2 composing" style="font-size: 80px;">12</div>
+      <div class="num2 composing" style="font-size: 80px;">13</div>
+      <div class="num2 composing" style="font-size: 80px;">14</div>
+      <div class="num2 composing" style="font-size: 80px;">15</div>
+      <div class="num2 composing" style="font-size: 80px;">16</div>
+      <div class="num2 composing" style="font-size: 80px;">17</div>
+      <div class="num2 composing" style="font-size: 80px;">18</div>
+      <div class="num2 composing" style="font-size: 80px;">19</div>
+      <div class="num2 composing" style="font-size: 80px;">20</div>
+    </div>
+    <div style="font-size: 80px; float: left;">
+      &nbsp;&nbsp;=&nbsp;&nbsp;
+    </div>
+    <div style="float: left;">
+      <input type="text" id="answer" name="userInput" value="" class="answer" placeholder="?">&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
+    <button type="button" name="button" onclick="validateOperation()" title="Validar"><i class="fas fa-check"
+        style="float: right;"></i></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="reloadNew" type="button" name="button" onclick="llenarBarra()"
+      title="Siguiente ejercicio">►</button><br><br>
+
+  </div>
+  <!-- <progress id="progress-max" value="0" max="100" style="width: 100%; height: 25px;"></progress> -->
+
+  <script type="text/javascript">
+    /* RANDOMIZE AND VALIDATE */
+    var random1 = Math.floor(Math.random() * $('.num1').length);
+    $('.num1').hide().eq(random1).show();
+
+    var random2 = Math.floor(Math.random() * $('.num2').length);
+    $('.num2').hide().eq(random2).show();
+
+    function validateOperation() {
+      var result = random1 + random2 + 2;
+      var validate = parseInt(document.getElementById('answer').value);
+      //alert(validate);
+      //alert(result);
+
+      if (result != validate) {
+        alert("Uy, parece que te has equivocado... Vamos de nuevo");
+        //location.reload();
+        //load(location.href+"#content");
+      } else {
+        alert("¡Excelente! Sigue así");
+        $('#content').load('sumas-x.html');
+        llenarBarra();
+        //location.reload();  
+        //load(location.href+"#content");
+      }
+    }
+
+    /* function nonZNumbers(){
+      if(result<0){
+        $('#content').load('restas-x.html');
+      }
+    }
+    window.onload = nonZNumbers(); */
+
+    //PROGRESS BAR
+    $indicator = document.getElementById('progress-max').value;
+    //$i=0;
+
+    function llenarBarra() {
+
+      $indicator = parseInt(document.getElementById('progress-max').value);
+      $indicator = $indicator + 10;
+      document.getElementById('progress-max').value = $indicator;
+
+      if ($indicator > 100) {
+        alert("¡Puntos guardados! Presiona enter o aceptar para continuar.");
+        window.location = "restas.html";
+      }
+    }
+
+    //AJAX
+    $('#reloadNew').click(function () {
+      $('#content').load('sumas-x.html');
+    });
+  </script>
+</body>
+
+</html>

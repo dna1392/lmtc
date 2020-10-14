@@ -12,6 +12,7 @@ if(isset($_POST['nomb'])&&!empty($_POST['nomb'])&&
 		$con=mysqli_connect($host,$user,$pw,$db) or die("problemas al conectar el servidor");
 		mysqli_query($con,"INSERT INTO usuario(nomb,apell,usuario,n_rol,n_documento,gmail,clave) 
 		VALUES ('$_POST[nomb]','$_POST[apell]','$_POST[user]','$_POST[rol]','$_POST[documento]','$_POST[correo]','$_POST[pw]')") or die ("fallas en la grabacion".mysqli_error($con));
+		console.log("Hola. Esta jodida.");
 		echo '<script>
 		alert("registro exitoso");
 		window.history.go(-1);
