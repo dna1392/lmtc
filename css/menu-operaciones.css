@@ -34,7 +34,7 @@ body{
     color: white;
     background-color: rgb(190,190,190);
     transition: .3s ease-in-out;
-    text-decoration: none;
+    /* text-decoration: none; */
     cursor: pointer;
 }
 
