@@ -1,12 +1,19 @@
-<html><head><title>Practica PHP</title></head>
-<body>
+<html>
+<head>
+<LINK REL=StyleSheet HREF="style2.css" TYPE="text/css" MEDIA=screen>
+</head>
+    <body>
+
 <?php
 include("conexion.php");
 
     $consulta="SELECT * FROM usuario";
     $resultado= $con->query($consulta) or die (mysqli_error($con));
 ?>
+  <div class="contenedor">
    <table width= "40%" border="2" bgcolor="">
+  <th colspan="15px" border-collapse= "collapse" padding="450px" ><h1>MODIFICAR</h1></th>
+
    	<tr>
   <td>NOMBRES</td>
   <td>APELLIDOS</td>
@@ -15,6 +22,7 @@ include("conexion.php");
   <td>CORREO</td>
   <td>CLAVE</td>
  </tr>
+ </div>
 
 <?php
   while($fila=$resultado->fetch_assoc())
@@ -39,7 +47,7 @@ include("conexion.php");
 
 </table>
 <br/>
-<a href="menu.html"> Regresar </a>
+<h3><a href="menu.html"class="button"style="text-decoration:none">Regresar</a></h3>
 </body>
 </html>
 

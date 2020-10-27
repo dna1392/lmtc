@@ -1,15 +1,20 @@
 <html>
-<head><title></title>
+<head>
+<LINK REL=StyleSheet HREF="style2.css" TYPE="text/css" MEDIA=screen>
 </head>
 	<body>
-	<?php 
+
+            <?php 
 	    //ob_start();	session_start()
          require_once("conexion.php");
 	    $consulta = " SELECT * from usuario ";
 	    $resultado = mysqli_query($con,$consulta);
 	?>
-				<table width="40%" border="2">
-	            <tr>
+	            <div class="contenedor">
+				<table  colspan="1px" border="1px" border-collapse= "collapse">
+		<th colspan="15px" border-collapse= "collapse" padding="450px" ><h1>ELIMINAR</h1></th>
+		<tr  colspan="20px"border-collapse= "collapse" padding="450px">
+
 					<td>NOMBRE</td>
 					<td>APELLIDO</td>
 					<td>USUARIO</td>
@@ -18,6 +23,7 @@
 	                <td>CLAVE</td>
 
 				  </tr>
+				</div>
 	<?php         
 		        while($fila=mysqli_fetch_assoc($resultado))
 		        {
@@ -29,12 +35,12 @@
 					$clave=$fila['clave'];	
 	?>               
 					  <tr>
-						<td><?php echo "<p style='color:#666;'>".$nomb."</p>";?></td>
-						<td><?php echo "<p style='color:#ccc;'>".$apell."</p>";?></td>
-						<td><?php echo "<p style='color:#666;'>".$usuario."</p>";?></td>
-						<td><?php echo "<p style='color:#ccc;'>".$documento."</p>";?></td>
-						<td><?php echo "<p style='color:#666;'>".$gmail."</p>";?></td>
-						<td><?php echo "<p style='color:#ccc;'>".$clave."</p>";?></td>
+						<td><h2><?php echo "<p style='color:#666;'>".$nomb."</p>";?></h2></td>
+						<td><h2><?php echo "<p style='color:#3B3F40;'>".$apell."</p>";?></h2></td>
+						<td><h2><?php echo "<p style='color:#666;'>".$usuario."</p>";?><h2></td>
+						<td><h2><?php echo "<p style='color:#3B3F40;'>".$documento."</p>";?></h2></td>
+						<td><h2><?php echo "<p style='color:#666;'>".$gmail."</p>";?></h2></td>
+						<td><h2><?php echo "<p style='color:#3B3F40;'>".$clave."</p>";?></h2></td>
 		                <td>
 		                	<form method="post" action="">
 		                    	<input type="submit" value="Eliminame" name="BORRAR" />
@@ -59,7 +65,10 @@
 					}
 				mysqli_close($con);
 			}
-	?>
-				</table><br/><a href="menu.html">Regresar</a>
+	?>          
+                
+				</table><br/><h3><a href="menu.html"class="button"style="text-decoration:none">Regresar</a></h3>
+				
+			
 	</body>
 </html>

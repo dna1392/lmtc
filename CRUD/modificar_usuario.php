@@ -1,3 +1,10 @@
+<html>
+<head>
+<LINK REL=StyleSheet HREF="style2.css" TYPE="text/css" MEDIA=screen>
+</head>
+</html>
+<link>
+<th colspan="15px" border-collapse= "collapse" padding="450px" ><h1>MODIFICAR</h1></th>
 <?php
 // ob_start();
 session_start();
@@ -71,12 +78,12 @@ if (isset($_POST['modificando']))
 	    <input type = "text" name = "gmail2" value = "
 	          <?php echo $correo;?>"><br>
 	    <input type = "text" name = "clave2" value = "
-	          <?php echo $pw;?>"><br>
+	          <?php echo $pw;?>"><br><br><br/>
 	    
 
-	    <input type = "submit" value = "CAMBIAR" name ="modificando">
+	    <input type = "submit" class="button"value = "CAMBIAR" name ="modificando">
 	</form>
-<br /> <a href="modificar1.php"> Regresar </a>
+<br /> <a href="modificar1.php"class="button"style="text-decoration:none">Regresar</a>
 </div>
 </div>
 </body>
