@@ -17,7 +17,7 @@
 <body onload="stopRefresh()">
 
   <div id="content" class="wrapper center-x">
-    <h3>SUMAR</h3>
+    <h3>Multiplicar</h3>
     <div class="n1 col s4" style="float: left;">
       <div class="num1 composing" style="font-size: 80px;">1</div>
       <div class="num1 composing" style="font-size: 80px;">2</div>
@@ -29,19 +29,9 @@
       <div class="num1 composing" style="font-size: 80px;">8</div>
       <div class="num1 composing" style="font-size: 80px;">9</div>
       <div class="num1 composing" style="font-size: 80px;">10</div>
-      <div class="num1 composing" style="font-size: 80px;">11</div>
-      <div class="num1 composing" style="font-size: 80px;">12</div>
-      <div class="num1 composing" style="font-size: 80px;">13</div>
-      <div class="num1 composing" style="font-size: 80px;">14</div>
-      <div class="num1 composing" style="font-size: 80px;">15</div>
-      <div class="num1 composing" style="font-size: 80px;">16</div>
-      <div class="num1 composing" style="font-size: 80px;">17</div>
-      <div class="num1 composing" style="font-size: 80px;">18</div>
-      <div class="num1 composing" style="font-size: 80px;">19</div>
-      <div class="num1 composing" style="font-size: 80px;">20</div>
     </div>
     <div style="font-size: 80px; float: left;">
-      &nbsp;&nbsp;+&nbsp;&nbsp;
+      &nbsp;&nbsp;x&nbsp;&nbsp;
     </div>
     <div class="n2 col s4" style="float: left;">
       <div class="num2 composing" style="font-size: 80px;">1</div>
@@ -54,16 +44,6 @@
       <div class="num2 composing" style="font-size: 80px;">8</div>
       <div class="num2 composing" style="font-size: 80px;">9</div>
       <div class="num2 composing" style="font-size: 80px;">10</div>
-      <div class="num2 composing" style="font-size: 80px;">11</div>
-      <div class="num2 composing" style="font-size: 80px;">12</div>
-      <div class="num2 composing" style="font-size: 80px;">13</div>
-      <div class="num2 composing" style="font-size: 80px;">14</div>
-      <div class="num2 composing" style="font-size: 80px;">15</div>
-      <div class="num2 composing" style="font-size: 80px;">16</div>
-      <div class="num2 composing" style="font-size: 80px;">17</div>
-      <div class="num2 composing" style="font-size: 80px;">18</div>
-      <div class="num2 composing" style="font-size: 80px;">19</div>
-      <div class="num2 composing" style="font-size: 80px;">20</div>
     </div>
     <div style="font-size: 80px; float: left;">
       &nbsp;&nbsp;=&nbsp;&nbsp;
@@ -90,10 +70,10 @@
     $('.num2').hide().eq(random2).show();
 
     function validateOperation() {
-      var result = random1 + random2 + 2;
+      var result = random1 * random2;
       var validate = parseInt(document.getElementById('answer').value);
-      //alert(validate);
-      //alert(result);
+      alert(validate);
+      alert(result);
 
       if (result != validate) {
         alert("Uy, parece que te has equivocado... Vamos de nuevo");
@@ -108,12 +88,12 @@
       }
     }
 
-    /* function nonZNumbers(){
+    function nonZNumbers(){
       if(result<0){
         $('#content').load('restas-x.html');
       }
     }
-    window.onload = nonZNumbers(); */
+    window.onload = nonZNumbers();
 
     //PROGRESS BAR
     $indicator = document.getElementById('progress-max').value;

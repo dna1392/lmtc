@@ -27,7 +27,7 @@
     text-align: center;
     transition: .3s ease-in;
     cursor: pointer;
-    background: background: rgba(255,255,255,.94);
+    background: rgba(255,255,255,.94);
 }
 
 .nav-section:hover{

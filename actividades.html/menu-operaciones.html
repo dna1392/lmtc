@@ -18,26 +18,15 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 		crossorigin="anonymous"></script>
-<<<<<<< Updated upstream
 	<script src="../js/prefixfree.js"></script>
 	<script src="../js/jquery.js"></script>
-	<script src="../js/divs-clickables.js"></script>
+	<!-- <script src="../js/divs-clickables.js"></script> -->
 
 	<link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
 
 	<link rel="stylesheet" href="../css/menu-operaciones.css">
 	<link rel="stylesheet" href="../css/nav.css">
-=======
-	<script src="js/prefixfree.js"></script>
-	<script src="js/jquery.js"></script>
-
-	<link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-
-	<link rel="stylesheet" href="css/herramientas.css">
-	<link rel="stylesheet" href="css/nav.css">
->>>>>>> Stashed changes
 </head>
 
 <body>
@@ -47,31 +36,30 @@
 					href="#" style="text-decoration: none; color: black;"><i class="fas fa-home"></i><br>Inicio</a>
 			</div>
 			<div id="sticky-nav-2" class="col s3 nav-section toolbox" style="padding: 5px 0 0; margin-top: 1px;"><a
-					href="" style="text-decoration: none; color: black;"><i
+					href="../herramientas.html" style="text-decoration: none; color: black;"><i
 						class="fas fa-toolbox"></i><br>Herramientas</a></div>
 			<div id="sticky-nav-3" class="col s3 nav-section award" style="padding: 5px 0 0; margin-top: 1px;"><a
-					href="sobrenosotros.html" style="text-decoration: none; color: black;"><i
+					href="../sobrenosotros.html" style="text-decoration: none; color: black;"><i
 						class="fas fa-award"></i><br>Sobre nosotros</a></div>
 			<div id="sticky-nav-4" class="col s3 nav-section user" style="padding: 5px 0 0; margin-top: 2px;"><a
-					href="registro.html" style="text-decoration: none; color: black;"><i
+					href="../registro.html" style="text-decoration: none; color: black;"><i
 						class="fas fa-user"></i><br>Iniciar sesión</a></div>
 		</div>
 		<hr style="width: 75%; color: rgba(30,30,30,.34)">
 		<div class="container">
-<<<<<<< Updated upstream
 			<h1>Elige la operación</h1><br>
 			<div class="row">
-			<div id="select-div" class="select-buttons plus col-md-5">
+			<div  class="clickable select-buttons plus col-md-5">
 				<i class="fas fa-plus"></i>
 				<a href="sumas.html"></a>&nbsp;&nbsp;&nbsp;Sumas</a>
 			</div>
 			&nbsp;&nbsp;&nbsp;
-			<div id="select-div" class="select-buttons minus col-md-5">
+			<div class="clickable select-buttons minus col-md-5">
 				<i class="fas fa-minus"></i>
 				<a href="restas.html"></a>&nbsp;&nbsp;&nbsp;Restas</a>
 			</div>
 		</div><br>
-		<div class="row">
+		<!-- <div class="row">
 			<div id="select-div" class="select-buttons multiply col-md-5">
 				<i class="fas fa-plus"></i>
 				<a href="sumas.html"></a>&nbsp;&nbsp;&nbsp;Multiplicación</a>
@@ -80,22 +68,15 @@
 			<div id="select-div" class="select-buttons divide col-md-5">
 				<i class="fas fa-minus"></i>
 				<a href="restas.html"></a>&nbsp;&nbsp;&nbsp;División</a>
-=======
-			<h1>¿Qué quieres practicar hoy?</h1><br>
-			<div class="row">
-			<div class="actividades col-md-5">
-				<i class="fas fa-clipboard-check"></i>
-				<a href="actividades.html/menu-operaciones.html">&nbsp;&nbsp;&nbsp;Actividades</a>
 			</div>
-			&nbsp;&nbsp;&nbsp;
-			<div class="guias col-md-5">
-				<i class="fas fa-print"></i>
-				<a href="actividades.html/guias.html">&nbsp;&nbsp;&nbsp;Guías</a>
->>>>>>> Stashed changes
-			</div>
-		</div>
+		</div> -->
 		</div>
 	</div>
 </body>
-
+<script>
+	$(".clickable").click(function () {
+		window.location = $(this).find("a").attr("href");
+		return false;
+	});
+</script>
 </html>
