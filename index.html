@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav.css">
@@ -92,6 +91,11 @@
             </div>
         </footer>
     </div>
+    <div class="contenedor">
+<button class="botonF1 clickable" title="Ayuda">
+  <a href="ayuda.html/ayuda1.html"></a> <span><i class="fas fa-question"></i></span>
+</button>
+ </div>
 </body>
 <script>
 
@@ -117,6 +121,13 @@
             document.getElementById("sticky-nav-4").classList.remove("dynamic-nav-when-scrolling", "dynamic-nav-section-4");
         }
     }
+
+    $('.botonF1').hover(function(){
+  $('.btn').addClass('animacionVer');
+})
+$('.contenedor').mouseleave(function(){
+  $('.btn').removeClass('animacionVer');
+})
 </script>
 
 </html>

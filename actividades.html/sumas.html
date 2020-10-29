@@ -8,7 +8,7 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="../css/activities.css">
-  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <!-- <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css" media="screen,projection" /> -->
   <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="../fontawesome/css/all.css">
 </head>
@@ -108,12 +108,12 @@
       }
     }
 
-     function nonZNumbers(){
-      if(result<0){
-        $('#content').load('restas-x.html');
-      }
-    }
-    window.onload = nonZNumbers(); 
+    //  function nonZNumbers(){
+    //   if(result<0){
+    //     $('#content').load('restas-x.html');
+    //   }
+    // }
+    // window.onload = nonZNumbers(); 
 
     //PROGRESS BAR
     $indicator = document.getElementById('progress-max').value;
@@ -127,7 +127,7 @@
 
       if ($indicator > 100) {
         alert("¡Puntos guardados! Presiona Aceptar para continuar.");
-        window.location = "restas.html";
+        window.location = "congratulations.html";
       }
     }
 
